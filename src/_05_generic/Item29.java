@@ -57,7 +57,6 @@ class Stack {
  * Stack class => generic Stack class
  * problem : array cannot be created because it is a non-reify type.
  * solution1 : see below
- * -> problem : heap polution occurs. (Item32.java)
  * solution2 : see below
  * @param <E>
  */

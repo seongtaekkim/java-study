@@ -1,7 +1,5 @@
 package generic;
 
-import java.util.Collection;
-import java.util.Iterator;
 import java.util.Set;
 
 public class Item26 {
@@ -18,5 +16,8 @@ public class Item26 {
         if(s1 instanceof Set) {
             Set<?> s = (Set<?>)s1;
         }
+    }
+
+    public static class Item30 {
     }
 }

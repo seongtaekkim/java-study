@@ -15,7 +15,9 @@ public class Item02 {
                 .calories(100).sodium(30).carbohydrate(5).build();
 
 
-
+        /**
+         * fluent API or method chaining
+         */
         NyPizza pizza = new NyPizza.Builder(SMALL).addTopping(SAUSAGE).addTopping(ONION).build();
         Calzone calzone = new Calzone.Builder().addTopping(HAM).sauceInside().build();
     }
@@ -39,7 +41,7 @@ class NutritionFacts {
         this(servingSize, servings, calories,fat, 0);
     }
     public NutritionFacts(int servingSize, int servings, int calories, int fat, int sodium) {
-        this(servingSize, servings, calories, fat, sodium, 0)
+        this(servingSize, servings, calories, fat, sodium, 0);
     }
     public NutritionFacts(int servingSize, int servings, int calories, int fat, int sodium, int cabohydrate) {
         this.servingSize = servingSize;
