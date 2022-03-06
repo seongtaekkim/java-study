@@ -1,3 +1,6 @@
+package _01_object_creation_and_destruction;
+
+import java.io.*;
 
 /**
  *  use try-with-resources rather than try-finally
@@ -25,7 +28,7 @@ public class Item09 {
     try {
       OutputStream out = new FileOutputStream(dst);
       try {
-        byte[] buf = new byte[BUFFER_SIZE];
+        byte[] buf = new byte[100];
         int n;
         while ((n=in.read(buf))>=0)
           out.write(buf,0,n);
@@ -39,30 +42,30 @@ public class Item09 {
   
   
   // try-with-resources
-  static String firstLineOfFile(String path) throws IOException {
+/*  static String firstLineOfFile(String path) throws IOException {
    try(BufferedReader br = new BufferedReader(new FileReader(path))) {
      return br.readLine();
    }
-  }
+  }*/
   // try-with-resources(2)
-  static void copy(String src, String dsp) throws IOException {
+  /*static void copy(String src, String dsp) throws IOException {
    try(InputStream in = new FileInputStream(src);
        OutputStream out = new FileOutputStream(dsp) {
-         byte[] buf = new byte[BUFFER_SIZE];
+         byte[] buf = new byte[100];
          int n;
-         while((n=in.read(buf)) >= 0) 
+         while((n=in.read(buf)) >= 0)
            out.write(buf,0,n);
        }
   }
-  
+
   // try-with-resources with catch
   static String firstLineOfFile(String path, String defaultVal) {
    try(BufferedReader br = new BufferedReader(new FileReader(path))) {
-        return br.leadLine);
+        return br.readLine());
    } catch (IOException e) {
      return defaultVal;
    }
-  }
+  }*/
   
 }
 
